@@ -55,22 +55,6 @@ public class Client {
         }
     }
 
-    public void closeConnection(){
-        try{
-            out.writeUTF("/end");
-        } catch (IOException e){
-            e.printStackTrace();
-        } finally {
-            try {
-                in.close();
-                out.close();
-                socket.close();
-            } catch (IOException e){
-                e.printStackTrace();
-            }
-        }
-    }
-
     public static void main(String[] args) {
         new Client();
     }
